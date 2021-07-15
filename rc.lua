@@ -157,8 +157,6 @@ awful.screen.connect_for_each_screen(function(s)
 end)
 -- }}}
 
-
-
 -- {{{ Mouse bindings
 root.buttons(my_table.join(awful.button({}, 3, function()
     awful.util.mymainmenu:toggle()
@@ -202,8 +200,7 @@ awful.key({modkey}, "t", function()
 end, {
     description = "terminal",
     group = "super"
-}), 
-awful.key({modkey}, "Escape", function()
+}), awful.key({modkey}, "Escape", function()
     awful.util.spawn("xkill")
 end, {
     description = "Kill process",
@@ -227,8 +224,7 @@ end, {
 end, {
     description = browser2,
     group = "alt+ctrl"
-}), 
-awful.key({modkey1, altkey}, "i", function()
+}), awful.key({modkey1, altkey}, "i", function()
     awful.util.spawn("nitrogen")
 end, {
     description = nitrogen,
