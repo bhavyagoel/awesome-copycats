@@ -199,7 +199,7 @@ awful.key({modkey}, "t", function()
     awful.util.spawn(terminal)
 end, {
     description = "terminal",
-    group = "super"
+    group = "Super"
 }), awful.key({modkey}, "f", function()
     awful.util.spawn(filemanager)
 end, {
@@ -492,6 +492,11 @@ end, {
 end, {
     description = "minimize",
     group = "client"
+}), awful.key({modkey}, "v", function()
+    awful.util.spawn("pavucontrol")
+end, {
+    description = "pulseaudio control",
+    group = "Super"
 }), awful.key({modkey}, "m", function(c)
     c.maximized = not c.maximized
     c:raise()
